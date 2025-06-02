@@ -1,0 +1,61 @@
+/* Contenedor principal centrado y con un máximo ancho */
+.mat-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Header del card para el título */
+.mat-card-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Título centrado y color agradable */
+.mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3f51b5;
+  text-align: center;
+}
+
+/* Espaciado vertical entre los inputs */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Botón principal con estilo y cambio de color al hover */
+button[mat-raised-button] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button]:hover:not(:disabled) {
+  background-color: #303f9f;
+}
+
+/* Mensajes de éxito y error con separación */
+.mensaje-exito,
+.mensaje-error {
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Para que el mat-select se vea alineado con inputs */
+.mat-form-field {
+  display: block;
+}
+
+/* Opcional: un poco de sombra para el card */
+.mat-elevation-z8 {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

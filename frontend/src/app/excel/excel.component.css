@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 1%;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1%;
+}
+
+button:hover {
+  background-color: #007bff;
+}
+
+.mat-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.mat-header-cell {
+  background-color: #007bff;
+  color: white;
+}
+
+.mat-cell {
+  color: black;
+}
+
+.spacer {
+  margin-left: 0.1%;
+}
+
+.mat-progress-spinner {
+  margin: 5% auto;
+}

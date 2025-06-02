@@ -1,0 +1,53 @@
+<mat-card class="mat-elevation-z8">
+  <form (submit)="onUpload(); $event.preventDefault()">
+    <input type="file" (change)="onFileSelected($event)" accept=".xlsx,.xls" />
+    <button mat-raised-button color="primary" type="submit">Subir archivo</button>
+    <button mat-raised-button color="primary" type="button" (click)="limpiarTabla()">Limpiar tabla</button>
+  </form>
+</mat-card>
+
+<mat-progress-spinner mode="indeterminate" *ngIf="isLoading"></mat-progress-spinner>
+
+<mat-table [dataSource]="dataSource" *ngIf="excelData && excelData.length > 0" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="fecha_movimiento">
+    <mat-header-cell *matHeaderCellDef> Fecha Movimiento </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.fecha_movimiento | date: 'dd/MM/yyyy' }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="infraestructura">
+    <mat-header-cell *matHeaderCellDef> Infraestructura/Pto </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.infraestructura }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="observaciones">
+    <mat-header-cell *matHeaderCellDef> Observaciones (Enagas) </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.observaciones }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="descripcion">
+    <mat-header-cell *matHeaderCellDef> Descripción tipo operación </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.descripcion }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="valor">
+    <mat-header-cell *matHeaderCellDef> Valor (kWh) </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.valor | number: '1.0-2' }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="justificante">
+    <mat-header-cell *matHeaderCellDef> Número justificante </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.justificante }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="observacionesAEAT">
+    <mat-header-cell *matHeaderCellDef> Observaciones AEAT </mat-header-cell>
+    <mat-cell *matCellDef="let item"> {{ item.observacionesAEAT }} </mat-cell>
+  </ng-container>
+
+  <!-- Encabezados y filas -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+

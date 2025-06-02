@@ -1,0 +1,49 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form #emisionesForm="ngForm">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Introduce el Nombre"
+          [(ngModel)]="datos.name"
+          (keydown)="onKeyDown($event)"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input
+          matInput
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Introduce la Contraseña"
+          [(ngModel)]="datos.password"
+          (keydown)="onKeyDown($event)"
+        />
+      </mat-form-field>
+
+      <div class="botones">
+        <button mat-raised-button color="primary" type="button" (click)="logear()">
+          Iniciar Sesión
+        </button>
+        <span class="spacer"></span>
+        <button mat-raised-button color="primary" type="button" (click)="logout()">
+          Cerrar Sesión
+        </button>
+        <button mat-raised-button [routerLink]="['/create-user']" color="primary" type="button" class="link">Crear Usuario</button>
+      </div>
+      <div *ngIf="loginExitoso" class="mensaje-exito" style="color: green; margin-top: 10px;">
+        ¡Has iniciado sesión correctamente!
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

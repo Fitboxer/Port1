@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <span>ENAGAS</span>
+  <span class="spacer"></span>
+  <span *ngIf="userName">Usuario: {{ userName }}</span>
+  <span class="spacer"></span>
+  <span *ngIf="userRole">Rol: {{ userRole }}</span>
+  <span class="spacer"></span>
+  <nav>
+    <button [routerLink]="['/']">Inicio</button>
+    <button *ngIf="userRole === 'ADMIN'" [routerLink]="['/calc']">Calcular</button>
+    <button *ngIf="userRole === 'ADMIN'" [routerLink]="['/excel']">Excel</button>
+  </nav>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

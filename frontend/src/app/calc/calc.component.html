@@ -1,0 +1,63 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>Calcular Volumen y Energía</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form #emisionesForm="ngForm">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Emisiones</mat-label>
+        <input
+          matInput
+          id="emisiones"
+          name="emisiones"
+          type="number"
+          placeholder="Introduce las Emisiones"
+          [(ngModel)]="datos.emisiones"
+          (keydown)="onKeyDown($event)"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Factor de Emisión</mat-label>
+        <input
+          matInput
+          id="factor_de_emision"
+          name="factorEmision"
+          type="number"
+          placeholder="Introduce el Factor de Emisión"
+          [(ngModel)]="datos.factorEmision"
+          (keydown)="onKeyDown($event)"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>PCS</mat-label>
+        <input
+          matInput
+          id="pcs"
+          name="pcs"
+          type="number"
+          placeholder="Introduce la PCS"
+          [(ngModel)]="datos.pcs"
+          (keydown)="onKeyDown($event)"
+        />
+      </mat-form-field>
+
+      <div class="botones">
+        <button mat-raised-button color="primary" type="button" (click)="calcularVolumen()">
+          Calcular Volumen
+        </button>
+        <span class="spacer"></span>
+        <button mat-raised-button color="primary" type="button" (click)="calcularEnergia()">
+          Calcular Energía
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <p *ngIf="resultadoVolumen !== null">El volumen es: {{ resultadoVolumen }}</p>
+    <p *ngIf="resultadoEnergia !== null">La energía es: {{ resultadoEnergia }}</p>
+  </mat-card-footer>
+</mat-card>
