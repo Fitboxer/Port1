@@ -1,15 +1,49 @@
-# Frontend
-/frontend/node_modules
-/frontend/dist
-
-# Backend
-/backend/target
-
-# IDEs
-.idea/
-.vscode/
-
-# Otros
-*.log
-.env
+# === Global ===
 .DS_Store
+Thumbs.db
+
+# === Node / Angular ===
+node_modules/
+dist/
+out-tsc/
+tmp/
+.angular/
+coverage/
+.env
+.env.local
+
+# === IDEs ===
+.vscode/
+.idea/
+*.iml
+
+# === Logs ===
+*.log
+
+# === OS ===
+*.swp
+*~
+
+# === Java / Maven ===
+**/target/
+**/bin/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+hs_err_pid*
+
+# === Spring Boot ===
+*.db
+*.h2.db
+*.mv.db
+*.trace.db
+spring.log
+
+# === Git ===
+.git/
+.gitignore
+
+# === Others ===
+frontend/.env
+backend/.env
