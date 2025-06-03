@@ -110,4 +110,4 @@ Este proyecto es de uso educativo. Puedes modificarlo libremente para tus propia
 ## ✍️ Autor
 
 **Tu Nombre**  
-GitHub: [https://github.com/tu-usuario](https://github.com/tu-usuario)
+GitHub: [https://github.com/tu-usuario](https://github.com/Fitboxer)
