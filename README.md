@@ -110,4 +110,4 @@ Este proyecto es de uso educativo. Puedes modificarlo libremente para tus propia
 ## ✍️ Autor
 
 **Adolfo Canales Otí**  
-GitHub: [https://github.com/tu-usuario](https://github.com/Fitboxer)
+GitHub: [https://github.com/Fitboxer](https://github.com/Fitboxer)
